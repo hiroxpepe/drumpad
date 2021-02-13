@@ -17,7 +17,21 @@ namespace Drumpad {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity {
 
+        ///////////////////////////////////////////////////////////////////////////////////////////////
+        // Fields
+
         const string soundFontPath = "/storage/emulated/0/Music/SoundFont/GeneralUser GS v1.47.sf2";
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////
+        // public Methods [verb]
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults) {
+            Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////
+        // protected Methods [verb]
 
         protected override void OnCreate(Bundle savedInstanceState) {
             base.OnCreate(savedInstanceState);
@@ -26,12 +40,11 @@ namespace Drumpad {
             SetContentView(Resource.Layout.activity_main);
 
             helloFluidsynth();
+            Log.Info(":)");
         }
 
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults) {
-            Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
+        ///////////////////////////////////////////////////////////////////////////////////////////////
+        // private Methods [verb]
 
         void helloFluidsynth() {
             fluid_settings_t_ptr _setting = IntPtr.Zero;
