@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#2c3e50</color>
-    <color name="colorPrimaryDark">#1B3147</color>
-    <color name="colorAccent">#3498db</color>
+    <color name="primary">#3E3E42</color>
+    <color name="primary-dark">#333333</color>
+    <color name="accent">#3498db</color>
+    <color name="sakura-red">#F0194B</color>
+    <color name="sakura-vermillion">#FC5221</color>
+    <color name="sakura-orange">#FE8F11</color>
+    <color name="sakura-chrome-yellow">#FEDE01</color>
+    <color name="sakura-lemon-yellow">#F6F73A</color>
+    <color name="sakura-yellow-green">#B4F83C</color>
+    <color name="sakura-green">#05C36D</color>
+    <color name="sakura-viridian">#06A283</color>
+    <color name="sakura-cobalt-blue">#0270D7</color>
+    <color name="sakura-ultramarine">#2C55FC</color>
+    <color name="sakura-purple">#A419BC</color>
+    <color name="sakura-red-purple">#CE089B</color>
 </resources>
