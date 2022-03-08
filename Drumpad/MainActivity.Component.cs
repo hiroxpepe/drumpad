@@ -17,58 +17,58 @@ namespace Drumpad {
         /// </summary>
         void initializeComponent() {
             var _buttonBassDrum = FindViewById<Button>(Resource.Id.button_bass_drum);
-            _buttonBassDrum.Click += buttonBassDrum_Click;
+            _buttonBassDrum.Touch += buttonBassDrum_Touch;
             var _buttonSnareDrum = FindViewById<Button>(Resource.Id.button_snare_drum);
-            _buttonSnareDrum.Click += buttonSnareDrum_Click;
+            _buttonSnareDrum.Touch += buttonSnareDrum_Touch;
             var _buttonHiHatOpen = FindViewById<Button>(Resource.Id.button_hi_hat_open);
-            _buttonHiHatOpen.Click += buttonHiHatOpen_Click;
+            _buttonHiHatOpen.Touch += buttonHiHatOpen_Touch;
             var _buttonHiHatClose = FindViewById<Button>(Resource.Id.button_hi_hat_close);
-            _buttonHiHatClose.Click += buttonHiHatClose_Click;
+            _buttonHiHatClose.Touch += buttonHiHatClose_Touch;
 
             var _buttonLowTomDrum = FindViewById<Button>(Resource.Id.button_low_tom_drum);
-            _buttonLowTomDrum.Click += buttonLowTomDrum_Click;
+            _buttonLowTomDrum.Touch += buttonLowTomDrum_Touch;
             var _buttonMidTomDrum = FindViewById<Button>(Resource.Id.button_mid_tom_drum);
-            _buttonMidTomDrum.Click += buttonMidTomDrum_Click;
+            _buttonMidTomDrum.Touch += buttonMidTomDrum_Touch;
             var _buttonHiTomDrum = FindViewById<Button>(Resource.Id.button_hi_tom_drum);
-            _buttonHiTomDrum.Click += buttonHiTomDrum_Click;
+            _buttonHiTomDrum.Touch += buttonHiTomDrum_Touch;
             var _buttonCrashCymbal = FindViewById<Button>(Resource.Id.button_crash_cymbal);
-            _buttonCrashCymbal.Click += buttonCrashCymbal_Click;
+            _buttonCrashCymbal.Touch += buttonCrashCymbal_Touch;
 
             var _buttonLowConga = FindViewById<Button>(Resource.Id.button_low_conga);
-            _buttonLowConga.Click += buttonLowConga_Click;
+            _buttonLowConga.Touch += buttonLowConga_Touch;
             var _buttonMuteHiConga = FindViewById<Button>(Resource.Id.button_mute_hi_conga);
-            _buttonMuteHiConga.Click += buttonMuteHiConga_Click;
+            _buttonMuteHiConga.Touch += buttonMuteHiConga_Touch;
             var _buttonOpenHiConga = FindViewById<Button>(Resource.Id.button_open_hi_conga);
-            _buttonOpenHiConga.Click += buttonOpenHiConga_Click;
+            _buttonOpenHiConga.Touch += buttonOpenHiConga_Touch;
             var _buttonClaves = FindViewById<Button>(Resource.Id.button_claves);
-            _buttonClaves.Click += buttonClaves_Click;
+            _buttonClaves.Touch += buttonClaves_Touch;
 
             var _buttonTambourine = FindViewById<Button>(Resource.Id.button_tambourine);
-            _buttonTambourine.Click += buttonTambourine_Click;
+            _buttonTambourine.Touch += buttonTambourine_Touch;
             var _buttonRimShot = FindViewById<Button>(Resource.Id.button_rim_shot);
-            _buttonRimShot.Click += buttonRimShot_Click;
+            _buttonRimShot.Touch += buttonRimShot_Touch;
             var _buttonHandClap = FindViewById<Button>(Resource.Id.button_hand_clap);
-            _buttonHandClap.Click += buttonHandClap_Click;
+            _buttonHandClap.Touch += buttonHandClap_Touch;
             var _buttonCowBell = FindViewById<Button>(Resource.Id.button_cow_bell);
-            _buttonCowBell.Click += buttonCowBell_Click;
+            _buttonCowBell.Touch += buttonCowBell_Touch;
 
             var _buttonHiTimbale = FindViewById<Button>(Resource.Id.button_hi_timbale);
-            _buttonHiTimbale.Click += buttonHiTimbale_Click;
+            _buttonHiTimbale.Touch += buttonHiTimbale_Touch;
             var _buttonLowTimbale = FindViewById<Button>(Resource.Id.button_low_timbale);
-            _buttonLowTimbale.Click += buttonLowTimbale_Click;
+            _buttonLowTimbale.Touch += buttonLowTimbale_Touch;
             var _buttonHiAgogo = FindViewById<Button>(Resource.Id.button_hi_agogo);
-            _buttonHiAgogo.Click += buttonHiAgogo_Click;
+            _buttonHiAgogo.Touch += buttonHiAgogo_Touch;
             var _buttonLowAgogo = FindViewById<Button>(Resource.Id.button_low_agogo);
-            _buttonLowAgogo.Click += buttonLowAgogo_Click;
+            _buttonLowAgogo.Touch += buttonLowAgogo_Touch;
 
             var _buttonCabasa = FindViewById<Button>(Resource.Id.button_cabasa);
-            _buttonCabasa.Click += buttonCabasa_Click;
+            _buttonCabasa.Touch += buttonCabasa_Touch;
             var _buttonMaracas = FindViewById<Button>(Resource.Id.button_maracas);
-            _buttonMaracas.Click += buttonMaracas_Click;
+            _buttonMaracas.Touch += buttonMaracas_Touch;
             var _buttonHiWoodBlock = FindViewById<Button>(Resource.Id.button_hi_wood_block);
-            _buttonHiWoodBlock.Click += buttonHiWoodBlock_Click;
+            _buttonHiWoodBlock.Touch += buttonHiWoodBlock_Touch;
             var _buttonLowWoodBlock = FindViewById<Button>(Resource.Id.button_low_wood_block);
-            _buttonLowWoodBlock.Click += buttonLowWoodBlock_Click;
+            _buttonLowWoodBlock.Touch += buttonLowWoodBlock_Touch;
         }
     }
 }
