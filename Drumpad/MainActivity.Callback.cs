@@ -1,7 +1,7 @@
 ﻿
 using Android.Support.V7.App;
-
-using System;
+using Android.Views;
+using static Android.Views.View;
 
 namespace Drumpad {
     /// <summary>
@@ -47,153 +47,201 @@ namespace Drumpad {
         // private Methods [verb]
 
         /// <summary>
-        /// buttonBassDrum Click.
+        /// buttonBassDrum Touch.
         /// </summary>
-        void buttonBassDrum_Click(object sender, EventArgs e) {
-            playDrumNote(BASS_DRUM_NOTE);
+        void buttonBassDrum_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(BASS_DRUM_NOTE);
+            }
         }
         /// <summary>
-        /// buttonSnareDrum Click.
+        /// buttonSnareDrum Touch.
         /// </summary>
-        void buttonSnareDrum_Click(object sender, EventArgs e) {
-            playDrumNote(SNARE_DRUM_NOTE);
+        void buttonSnareDrum_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(SNARE_DRUM_NOTE);
+            }
         }
         /// <summary>
-        /// buttonHiHatOpen Click.
+        /// buttonHiHatOpen Touch.
         /// </summary>
-        void buttonHiHatOpen_Click(object sender, EventArgs e) {
-            playDrumNote(HI_HAT_OPEN_NOTE);
+        void buttonHiHatOpen_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(HI_HAT_OPEN_NOTE);
+            }
         }
         /// <summary>
-        /// buttonHiHatClose Click.
+        /// buttonHiHatClose Touch.
         /// </summary>
-        void buttonHiHatClose_Click(object sender, EventArgs e) {
-            playDrumNote(HI_HAT_CLOSE_NOTE);
-        }
-
-        /// <summary>
-        /// buttonLowTomDrum Click.
-        /// </summary>
-        void buttonLowTomDrum_Click(object sender, EventArgs e) {
-            playDrumNote(LOW_TOM_DRUM_NOTE);
-        }
-        /// <summary>
-        /// buttonMidTomDrum Click.
-        /// </summary>
-        void buttonMidTomDrum_Click(object sender, EventArgs e) {
-            playDrumNote(MID_TOM_DRUM_NOTE);
-        }
-        /// <summary>
-        /// buttonHiTomDrum Click.
-        /// </summary>
-        void buttonHiTomDrum_Click(object sender, EventArgs e) {
-            playDrumNote(HI_TOM_DRUM_NOTE);
-        }
-        /// <summary>
-        /// buttonCrashCymbal Click.
-        /// </summary>
-        void buttonCrashCymbal_Click(object sender, EventArgs e) {
-            playDrumNote(CRASH_CYMBAL_NOTE);
+        void buttonHiHatClose_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(HI_HAT_CLOSE_NOTE);
+            }
         }
 
         /// <summary>
-        /// buttonLowConga Click.
+        /// buttonLowTomDrum Touch.
         /// </summary>
-        void buttonLowConga_Click(object sender, EventArgs e) {
-            playDrumNote(LOW_CONGA_NOTE);
+        void buttonLowTomDrum_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(LOW_TOM_DRUM_NOTE);
+            }
         }
         /// <summary>
-        /// buttonMidConga Click.
+        /// buttonMidTomDrum Touch.
         /// </summary>
-        void buttonMuteHiConga_Click(object sender, EventArgs e) {
-            playDrumNote(MUTE_HI_CONGA_NOTE);
+        void buttonMidTomDrum_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(MID_TOM_DRUM_NOTE);
+            }
         }
         /// <summary>
-        /// buttonHiConga Click.
+        /// buttonHiTomDrum Touch.
         /// </summary>
-        void buttonOpenHiConga_Click(object sender, EventArgs e) {
-            playDrumNote(OPEN_HI_CONGA_NOTE);
+        void buttonHiTomDrum_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(HI_TOM_DRUM_NOTE);
+            }
         }
         /// <summary>
-        /// buttonClaves Click.
+        /// buttonCrashCymbal Touch.
         /// </summary>
-        void buttonClaves_Click(object sender, EventArgs e) {
-            playDrumNote(CLAVES_NOTE);
-        }
-
-        /// <summary>
-        /// buttonTambourine Click.
-        /// </summary>
-        void buttonTambourine_Click(object sender, EventArgs e) {
-            playDrumNote(TAMBOURINE_NOTE);
-        }
-        /// <summary>
-        /// buttonRimShot Click.
-        /// </summary>
-        void buttonRimShot_Click(object sender, EventArgs e) {
-            playDrumNote(RIM_SHOT_NOTE);
-        }
-        /// <summary>
-        /// buttonHandClap Click.
-        /// </summary>
-        void buttonHandClap_Click(object sender, EventArgs e) {
-            playDrumNote(HAND_CLAP_NOTE);
-        }
-        /// <summary>
-        /// buttonCrashCymbal Click.
-        /// </summary>
-        void buttonCowBell_Click(object sender, EventArgs e) {
-            playDrumNote(COW_BELL_NOTE);
+        void buttonCrashCymbal_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(CRASH_CYMBAL_NOTE);
+            }
         }
 
         /// <summary>
-        /// buttonHiTimbale Click.
+        /// buttonLowConga Touch.
         /// </summary>
-        void buttonHiTimbale_Click(object sender, EventArgs e) {
-            playDrumNote(HI_TIMBALE_NOTE);
+        void buttonLowConga_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(LOW_CONGA_NOTE);
+            }
         }
         /// <summary>
-        /// buttonLowTimbale Click.
+        /// buttonMidConga Touch.
         /// </summary>
-        void buttonLowTimbale_Click(object sender, EventArgs e) {
-            playDrumNote(LOW_TIMBALE_NOTE);
+        void buttonMuteHiConga_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(MUTE_HI_CONGA_NOTE);
+            }
         }
         /// <summary>
-        /// buttonHiAgogo Click.
+        /// buttonHiConga Touch.
         /// </summary>
-        void buttonHiAgogo_Click(object sender, EventArgs e) {
-            playDrumNote(HI_AGOGO_NOTE);
+        void buttonOpenHiConga_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(OPEN_HI_CONGA_NOTE);
+            }
         }
         /// <summary>
-        /// buttonLowAgogo Click.
+        /// buttonClaves Touch.
         /// </summary>
-        void buttonLowAgogo_Click(object sender, EventArgs e) {
-            playDrumNote(LOW_AGOGO_NOTE);
+        void buttonClaves_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(CLAVES_NOTE);
+            }
         }
 
         /// <summary>
-        /// buttonCabasa Click.
+        /// buttonTambourine Touch.
         /// </summary>
-        void buttonCabasa_Click(object sender, EventArgs e) {
-            playDrumNote(CABASA_NOTE);
+        void buttonTambourine_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(TAMBOURINE_NOTE);
+            }
         }
         /// <summary>
-        /// buttonMaracas Click.
+        /// buttonRimShot Touch.
         /// </summary>
-        void buttonMaracas_Click(object sender, EventArgs e) {
-            playDrumNote(MARACAS_NOTE);
+        void buttonRimShot_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(RIM_SHOT_NOTE);
+            }
         }
         /// <summary>
-        /// buttonHiWoodBlock Click.
+        /// buttonHandClap Touch.
         /// </summary>
-        void buttonHiWoodBlock_Click(object sender, EventArgs e) {
-            playDrumNote(HI_WOOD_BLOCK_NOTE);
+        void buttonHandClap_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(HAND_CLAP_NOTE);
+            }
         }
         /// <summary>
-        /// buttonLowWoodBlock Click.
+        /// buttonCrashCymbal Touch.
         /// </summary>
-        void buttonLowWoodBlock_Click(object sender, EventArgs e) {
-            playDrumNote(LOW_WOOD_BLOCK_NOTE);
+        void buttonCowBell_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(COW_BELL_NOTE);
+            }
+        }
+
+        /// <summary>
+        /// buttonHiTimbale Touch.
+        /// </summary>
+        void buttonHiTimbale_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(HI_TIMBALE_NOTE);
+            }
+        }
+        /// <summary>
+        /// buttonLowTimbale Touch.
+        /// </summary>
+        void buttonLowTimbale_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(LOW_TIMBALE_NOTE);
+            }
+        }
+        /// <summary>
+        /// buttonHiAgogo Touch.
+        /// </summary>
+        void buttonHiAgogo_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(HI_AGOGO_NOTE);
+            }
+        }
+        /// <summary>
+        /// buttonLowAgogo Touch.
+        /// </summary>
+        void buttonLowAgogo_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(LOW_AGOGO_NOTE);
+            }
+        }
+
+        /// <summary>
+        /// buttonCabasa Touch.
+        /// </summary>
+        void buttonCabasa_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(CABASA_NOTE);
+            }
+        }
+        /// <summary>
+        /// buttonMaracas Touch.
+        /// </summary>
+        void buttonMaracas_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(MARACAS_NOTE);
+            }
+        }
+        /// <summary>
+        /// buttonHiWoodBlock Touch.
+        /// </summary>
+        void buttonHiWoodBlock_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(HI_WOOD_BLOCK_NOTE);
+            }
+        }
+        /// <summary>
+        /// buttonLowWoodBlock Touch.
+        /// </summary>
+        void buttonLowWoodBlock_Touch(object sender, TouchEventArgs? e) {
+            if (e?.Event?.ActionMasked == MotionEventActions.Down) {
+                playDrumNote(LOW_WOOD_BLOCK_NOTE);
+            }
         }
     }
 }
