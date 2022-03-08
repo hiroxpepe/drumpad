@@ -46,6 +46,9 @@ namespace NativeFuncs {
 
         [DllImport(LIBLARY)]
         internal static extern int fluid_synth_noteoff(fluid_synth_t synth, int chan, int key);
+
+        [DllImport(LIBLARY)]
+        internal static extern void fluid_synth_set_gain(fluid_synth_t synth, float gain);
     }
 }
 

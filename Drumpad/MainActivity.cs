@@ -31,6 +31,7 @@ namespace Drumpad {
         /// </summary>
         const string SOUND_FONT_PATH = "/storage/emulated/0/Music/SoundFont/OmegaGMGS2.sf2";
 
+        const float SYNTH_GAIN = 1.0f;
         const int MIDI_CHANNEL = 9;
         const int NOTE_VELOCITY = 120;
 
@@ -108,6 +109,7 @@ namespace Drumpad {
             try {
                 _setting = new_fluid_settings();
                 _synth = new_fluid_synth(_setting);
+                fluid_synth_set_gain(_synth, SYNTH_GAIN);
                 _adriver = new_fluid_audio_driver(_setting, _synth);
                 Log.Info($"try to load the sound font: {SOUND_FONT_PATH}");
                 if (fluid_is_soundfont(SOUND_FONT_PATH) != 1) {
